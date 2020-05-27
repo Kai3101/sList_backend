@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="/Users/kai/Downloads/apache-maven-3.5.4/Maven_Jar/org/postgresql/postgresql/9.4.1212.jre7/postgresql-9.4.1212.jre7.jar"/>
+    <context id="my" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://ec2-54-246-87-132.eu-west-1.compute.amazonaws.com:5432/d4cebr7b05ljkc?sslmode=require"
+                        userId="akkvspkezvpxnf"
+                        password="56381a20b754b32af4b69119cf2d8ed0a84da36de184abc7df771575236db2d8"/>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.kaini.sList.domain"
+                            targetProject="/Users/kai/Desktop/sList/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="xml"
+                         targetProject="/Users/kai/Desktop/sList/src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.kaini.sList.mapper"
+                             targetProject="/Users/kai/Desktop/sList/src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="t_result" domainObjectName="UserResult">
+
+        </table>
+
+    </context>
+</generatorConfiguration>
