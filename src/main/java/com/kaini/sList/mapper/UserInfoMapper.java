@@ -3,8 +3,11 @@ package com.kaini.sList.mapper;
 import com.kaini.sList.domain.UserInfo;
 import com.kaini.sList.domain.UserInfoExample;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+@Mapper
 public interface UserInfoMapper {
     long countByExample(UserInfoExample example);
 
