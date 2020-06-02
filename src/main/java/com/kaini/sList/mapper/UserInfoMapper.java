@@ -30,4 +30,11 @@ public interface UserInfoMapper {
     int updateByPrimaryKeySelective(UserInfo record);
 
     int updateByPrimaryKey(UserInfo record);
+
+    /**
+     * Check if email already exists
+     * @param email
+     * @return
+     */
+    UserInfo checkUserEmail(@Param("email") String email);
 }
